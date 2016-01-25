@@ -12,6 +12,7 @@
 @interface ViewController () <UIScrollViewDelegate>
 @property (strong, nonatomic) IBOutlet UIScrollView *mainScrollView;
 @property (strong, nonatomic) IBOutlet UITapGestureRecognizer *tapGestureRecognizer;
+@property (strong, nonatomic) IBOutlet UIPageControl *pageController;
 
 @end
 
@@ -66,6 +67,10 @@
         detailView.imageToUseName = @"Lighthouse-in-Field.jpg";
     }
 
+}
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    self.pageController.currentPage = self.mainScrollView.contentOffset.x / self.mainScrollView.frame.size.width;
 }
 
 - (void)didReceiveMemoryWarning {

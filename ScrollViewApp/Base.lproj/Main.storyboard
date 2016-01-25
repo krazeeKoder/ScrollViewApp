@@ -35,11 +35,22 @@
                                     <outletCollection property="gestureRecognizers" destination="rHL-57-H4V" appends="YES" id="brE-DI-wEt"/>
                                 </connections>
                             </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="ofp-bC-9Sa">
+                                <rect key="frame" x="280" y="550" width="39" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="39" id="Eal-NT-JXv"/>
+                                    <constraint firstAttribute="height" constant="37" id="Jhp-VY-xBt"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" red="0.037536777952179468" green="1" blue="0.012545997037658019" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="NeL-ZU-ORy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="DaO-3Y-I26"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NeL-ZU-ORy" secondAttribute="bottom" id="FW1-qJ-Rby"/>
+                            <constraint firstItem="ofp-bC-9Sa" firstAttribute="centerX" secondItem="NeL-ZU-ORy" secondAttribute="centerX" id="HxW-57-fAe"/>
+                            <constraint firstItem="ofp-bC-9Sa" firstAttribute="top" secondItem="NeL-ZU-ORy" secondAttribute="bottom" constant="-50" id="VH1-1h-QTU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NeL-ZU-ORy" secondAttribute="trailing" id="aJ1-1b-6ew"/>
                             <constraint firstItem="NeL-ZU-ORy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fQd-MQ-pZV"/>
                         </constraints>
@@ -47,6 +58,7 @@
                     <navigationItem key="navigationItem" id="r2m-UL-8Q4"/>
                     <connections>
                         <outlet property="mainScrollView" destination="NeL-ZU-ORy" id="Y5S-a9-SLu"/>
+                        <outlet property="pageController" destination="ofp-bC-9Sa" id="VbA-d5-uo3"/>
                         <outlet property="tapGestureRecognizer" destination="rHL-57-H4V" id="3m1-t2-OFb"/>
                     </connections>
                 </viewController>
