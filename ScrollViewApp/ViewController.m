@@ -53,6 +53,7 @@
     
     self.mainScrollView.delegate = self;
     self.mainScrollView.pagingEnabled = YES;
+    [self.view bringSubviewToFront: self.pageController];
 }
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -68,6 +69,14 @@
     }
 
 }
+
+- (IBAction)clickToChangePage:(UIPageControl *)sender {
+    
+    [self.mainScrollView setContentOffset:CGPointMake(self.mainScrollView.frame.size.width * sender.currentPage, 0)];
+}
+
+
+
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView {
     self.pageController.currentPage = self.mainScrollView.contentOffset.x / self.mainScrollView.frame.size.width;
