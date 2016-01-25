@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4mX-9m-scM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -47,6 +47,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="245" y="399"/>
+        </scene>
+        <!--Entry View Controller-->
+        <scene sceneID="fTr-PC-fR2">
+            <objects>
+                <viewController id="4mX-9m-scM" customClass="EntryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yut-Fh-53v"/>
+                        <viewControllerLayoutGuide type="bottom" id="6eD-nD-XAs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LeW-rW-gaG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J0W-Ib-p90">
+                                <rect key="frame" x="20" y="20" width="560" height="560"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2N2-mf-ilU"/>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="2N2-mf-ilU" secondAttribute="bottom" id="NoD-Kd-2s9"/>
+                                    <constraint firstAttribute="trailing" secondItem="2N2-mf-ilU" secondAttribute="trailing" id="TOv-69-osz"/>
+                                    <constraint firstItem="2N2-mf-ilU" firstAttribute="leading" secondItem="J0W-Ib-p90" secondAttribute="leading" id="iU6-M4-Dt5"/>
+                                    <constraint firstItem="2N2-mf-ilU" firstAttribute="top" secondItem="J0W-Ib-p90" secondAttribute="top" id="ut3-DS-5WZ"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="J0W-Ib-p90" secondAttribute="leading" id="7ep-y4-o9u"/>
+                            <constraint firstItem="J0W-Ib-p90" firstAttribute="top" secondItem="yut-Fh-53v" secondAttribute="bottom" id="jpL-Ch-zvn"/>
+                            <constraint firstItem="6eD-nD-XAs" firstAttribute="top" secondItem="J0W-Ib-p90" secondAttribute="bottom" constant="20" id="tZU-DX-Poh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="J0W-Ib-p90" secondAttribute="trailing" id="xLH-Oy-XWD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="entryScrollView" destination="J0W-Ib-p90" id="9o6-9U-S8C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xRS-05-1cg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="-273"/>
         </scene>
     </scenes>
 </document>
