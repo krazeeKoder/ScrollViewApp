@@ -25,14 +25,6 @@
     
 }
 
-//-(instancetype) init {
-//    self = [super init];
-//    if (self) {
-//        _entryScrollView = [[UIScrollView alloc] init];
-//        _detailImageView = [[UIImageView alloc] init];
-//    }
-//    return self;
-//}
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -40,8 +32,9 @@
     self.detailScrollView  = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     self.detailImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:self.imageToUseName]];
     self.detailScrollView.delegate = self;
-    self.detailScrollView.minimumZoomScale = 0.5;
+    self.detailScrollView.minimumZoomScale = 0.3;
     self.detailScrollView.maximumZoomScale = 10;
+    self.detailScrollView.zoomScale = 0.3;
     //[self.entryScrollView.delegate viewForZoomingInScrollView:self.entryScrollView];
     
     [self.detailScrollView addSubview:self.detailImageView];
