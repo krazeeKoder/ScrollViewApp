@@ -27,21 +27,21 @@
     UIImageView *lighthouse01 = [[UIImageView alloc] initWithFrame:CGRectMake(xPosition, 0, CGRectGetWidth(self.mainScrollView.frame), CGRectGetHeight(self.mainScrollView.frame))];
     xPosition += self.mainScrollView.frame.size.width;
     lighthouse01.image = [UIImage imageNamed:@"Lighthouse.jpg"];
-    lighthouse01.contentMode = UIViewContentModeScaleToFill;
+    lighthouse01.contentMode = UIViewContentModeScaleAspectFit;
     [self.mainScrollView addSubview:lighthouse01];
     
     
     UIImageView *lighthouse02 = [[UIImageView alloc] initWithFrame:CGRectMake(xPosition, 0, CGRectGetWidth(self.mainScrollView.frame), CGRectGetHeight(self.mainScrollView.frame))];
     xPosition += self.mainScrollView.frame.size.width;
     lighthouse02.image = [UIImage imageNamed:@"Lighthouse-night.jpg"];
-    lighthouse02.contentMode = UIViewContentModeScaleToFill;
+    lighthouse02.contentMode = UIViewContentModeScaleAspectFit;
     [self.mainScrollView addSubview:lighthouse02];
     
     
     UIImageView *lighthouse03 = [[UIImageView alloc] initWithFrame:CGRectMake(xPosition, 0, CGRectGetWidth(self.mainScrollView.frame), CGRectGetHeight(self.mainScrollView.frame))];
     xPosition += self.mainScrollView.frame.size.width;
     lighthouse03.image = [UIImage imageNamed:@"Lighthouse-in-Field.jpg"];
-    lighthouse03.contentMode = UIViewContentModeScaleToFill;
+    lighthouse03.contentMode = UIViewContentModeScaleAspectFit;
     [self.mainScrollView addSubview:lighthouse03];
     
     float allWidths = CGRectGetWidth(lighthouse01.frame) + CGRectGetWidth(lighthouse02.frame) + CGRectGetWidth(lighthouse03.frame);
@@ -49,7 +49,7 @@
     self.mainScrollView.contentSize = CGSizeMake(allWidths, CGRectGetHeight(lighthouse01.frame));
     
     self.mainScrollView.delegate = self;
-    
+    self.mainScrollView.pagingEnabled = YES;
 }
 
 - (void)didReceiveMemoryWarning {
