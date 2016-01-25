@@ -15,7 +15,7 @@
 		7BD8EF641C569685007CB314 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BD8EF621C569685007CB314 /* LaunchScreen.storyboard */; };
 		7BD8EF6F1C569685007CB314 /* ScrollViewAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD8EF6E1C569685007CB314 /* ScrollViewAppTests.m */; };
 		7BD8EF7A1C569685007CB314 /* ScrollViewAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD8EF791C569685007CB314 /* ScrollViewAppUITests.m */; };
-		7BD8EF891C56A80D007CB314 /* EntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD8EF881C56A80D007CB314 /* EntryViewController.m */; };
+		7BD8EF891C56A80D007CB314 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD8EF881C56A80D007CB314 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +52,8 @@
 		7BD8EF751C569685007CB314 /* ScrollViewAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollViewAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BD8EF791C569685007CB314 /* ScrollViewAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollViewAppUITests.m; sourceTree = "<group>"; };
 		7BD8EF7B1C569685007CB314 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7BD8EF871C56A80D007CB314 /* EntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryViewController.h; sourceTree = "<group>"; };
-		7BD8EF881C56A80D007CB314 /* EntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryViewController.m; sourceTree = "<group>"; };
+		7BD8EF871C56A80D007CB314 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		7BD8EF881C56A80D007CB314 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +104,8 @@
 		7BD8EF531C569685007CB314 /* ScrollViewApp */ = {
 			isa = PBXGroup;
 			children = (
-				7BD8EF871C56A80D007CB314 /* EntryViewController.h */,
-				7BD8EF881C56A80D007CB314 /* EntryViewController.m */,
+				7BD8EF871C56A80D007CB314 /* DetailViewController.h */,
+				7BD8EF881C56A80D007CB314 /* DetailViewController.m */,
 				7BD8EF571C569685007CB314 /* AppDelegate.h */,
 				7BD8EF581C569685007CB314 /* AppDelegate.m */,
 				7BD8EF5A1C569685007CB314 /* ViewController.h */,
@@ -279,7 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BD8EF5C1C569685007CB314 /* ViewController.m in Sources */,
-				7BD8EF891C56A80D007CB314 /* EntryViewController.m in Sources */,
+				7BD8EF891C56A80D007CB314 /* DetailViewController.m in Sources */,
 				7BD8EF591C569685007CB314 /* AppDelegate.m in Sources */,
 				7BD8EF561C569685007CB314 /* main.m in Sources */,
 			);

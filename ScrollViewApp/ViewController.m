@@ -7,9 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "DetailViewController.h"
 
 @interface ViewController () <UIScrollViewDelegate>
 @property (strong, nonatomic) IBOutlet UIScrollView *mainScrollView;
+@property (strong, nonatomic) IBOutlet UITapGestureRecognizer *tapGestureRecognizer;
 
 @end
 
@@ -50,6 +52,20 @@
     
     self.mainScrollView.delegate = self;
     self.mainScrollView.pagingEnabled = YES;
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    DetailViewController *detailView = (DetailViewController *)segue.destinationViewController;
+    
+    if (self.mainScrollView.contentOffset.x / self.mainScrollView.frame.size.width == 0) {
+        detailView.imageToUseName = @"Lighthouse.jpg";
+    } else if (self.mainScrollView.contentOffset.x / self.mainScrollView.frame.size.width == 1) {
+        detailView.imageToUseName = @"Lighthouse-night.jpg";
+    } else {
+        detailView.imageToUseName = @"Lighthouse-in-Field.jpg";
+    }
+
 }
 
 - (void)didReceiveMemoryWarning {
